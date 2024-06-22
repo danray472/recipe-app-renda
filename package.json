@@ -1,11 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "src/index.js",  // Ensure this matches your entry point
+  "main": "src/index.js",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon src/index.js"  // Adjust based on your project setup
+    "start": "nodemon src/index.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
