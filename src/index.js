@@ -12,10 +12,13 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL, // Update with your frontend URL on Renda
+  origin: process.env.FRONTEND_URL, // Your frontend URL
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true, // Allow credentials
+  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 }));
+
 
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
